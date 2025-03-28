@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "euclid";
+  src: url(fonts/Euclid\ Circular\ A\ Medium.ttf);
+}
+
+@font-face {
+  font-family: "murmure";
+  src: url(fonts/le-murmure.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #dbdbf8;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distributes slides */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* First Slide - Grid Layout */
+.slide_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Evenly spaced columns */
+  grid-template-rows: 1fr 5fr; /* Two rows */
+  gap: 1rem;
+  background-color: #a3a3d1;
+  padding: 1rem;
+  min-height: 50vh; /* Temporary height for visibility */
+  width: 60vw;
+}
+
+/* Individual elements inside slide_1 */
+.nav_bar,
+.daily,
+.description,
+.buy {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed black;
+  padding: 1rem;
+  min-height: 5vh; /* Temporary visibility */
+}
+
+/* Other slides */
+.slide_2,
+.slide_3 {
+  flex: 1;
+  background-color: #b3b3f1;
+  min-height: 50vh;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+/* Categories and Blog sections */
+.categories,
+.blog {
+  background-color: #e1e1ff;
+  min-height: 20vh;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px dashed black;
+}
+
+.nav_bar {
+  grid-column: 1 / 4;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_bar p {
+  margin-top: 0px;
+  align-items: center;
+}
+
+.catalogue_nav,
+.blog_nav,
+.contacts_nav {
+  font-family: "euclid";
+  font-size: 18px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_bar p:first-child {
+  font-family: "murmure"; /* wtf is that and how do I get it */
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.catalogue_nav {
+  margin-left: 20%;
+}
+
+.blog_nav,
+.contacts_nav {
+  margin-left: auto;
+}
+
+.contacts_nav {
+  margin-left: 1%;
+}
