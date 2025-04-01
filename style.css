@@ -8,10 +8,15 @@
   src: url(fonts/le-murmure.ttf);
 }
 
+@font-face {
+  font-family: "floreste";
+  src: url(fonts/FloresteWavy-BWPqd.otf);
+}
+
 body {
   display: flex;
   flex-direction: column;
-  background-color: #dbdbf8;
+  background-color: #dbdbf8; /*temp*/
   margin: 0;
   padding: 0;
   color: white;
@@ -20,21 +25,21 @@ body {
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Distributes slides */
-  gap: 1rem;
-  padding: 1rem;
+  justify-content: space-between; /* Distributes slides */ /*temp*/
+  gap: 1rem; /*temp*/
+  padding: 1rem; /*temp*/
 }
 
 /* First Slide - Grid Layout */
 .slide_1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Evenly spaced columns */
-  grid-template-rows: 1fr 5fr; /* Two rows */
-  gap: 1rem;
-  background-color: #a3a3d1;
-  padding: 1rem;
-  min-height: 50vh; /* Temporary height for visibility */
-  width: 60vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 5fr;
+  gap: 1rem; /*temp*/
+  background-color: #a3a3d1; /*temp*/
+  padding: 1rem; /*temp*/
+  min-height: 50vh; /*temp*/
+  width: 60vw; /*temp*/
 }
 
 /* Individual elements inside slide_1 */
@@ -42,30 +47,30 @@ body {
 .daily,
 .description,
 .buy {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px dashed black;
-  padding: 1rem;
-  min-height: 5vh; /* Temporary visibility */
+  background-color: rgba(255, 255, 255, 0.5); /*temp*/
+  border: 1px dashed black; /*temp*/
+  padding: 1rem; /*temp*/
+  min-height: 5vh; /*temp*/
 }
 
 /* Other slides */
 .slide_2,
 .slide_3 {
-  flex: 1;
-  background-color: #b3b3f1;
-  min-height: 50vh;
-  padding: 1rem;
-  border: 1px solid black;
+  flex: 1; /*temp*/
+  background-color: #b3b3f1; /*temp*/
+  min-height: 50vh; /*temp*/
+  padding: 1rem; /*temp*/
+  border: 1px solid black; /*temp*/
 }
 
 /* Categories and Blog sections */
 .categories,
 .blog {
-  background-color: #e1e1ff;
-  min-height: 20vh;
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px dashed black;
+  background-color: #e1e1ff; /*temp*/
+  min-height: 20vh; /*temp*/
+  margin: 1rem; /*temp*/
+  padding: 1rem; /*temp*/
+  border: 1px dashed black; /*temp*/
 }
 
 .nav_bar {
@@ -91,7 +96,7 @@ body {
 }
 
 .nav_bar p:first-child {
-  font-family: "murmure"; /* wtf is that and how do I get it */
+  font-family: "murmure";
   font-weight: 600;
   font-size: 45px;
 }
@@ -107,4 +112,98 @@ body {
 
 .contacts_nav {
   margin-left: 1%;
+}
+
+.daily {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.special {
+  position: relative;
+  top: 150px;
+  font-family: "euclid";
+  font-size: 18px;
+  font-weight: 500;
+  color: hsla(74, 100%, 68%, 1);
+}
+
+.bottom_special p:first-child {
+  font-family: "euclid";
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.bottom_special p:nth-child(2) {
+  font-family: "euclid";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.bottom_special p:last-child {
+  font-family: "floreste";
+  font-weight: 400;
+  font-size: 40px;
+  color: hsla(74, 100%, 68%, 1);
+}
+
+.description img {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 362px;
+  min-height: 725px;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+}
+
+.ellipse_opaque {
+  background-color: hsla(0, 0%, 100%, 0.19);
+  width: 356px; /* change to relative?*/
+  height: 135px;
+  border-radius: 50%;
+  transform: rotate(-13deg);
+  border: 2px solid #d9ff5a;
+}
+
+.ellipse_opaque button {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  background-color: unset;
+  border: none;
+  transform: rotate(13deg);
+  color: white;
+}
+
+.ellipse_opaque img {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(66%) saturate(1584%)
+    hue-rotate(21deg) brightness(102%) contrast(97%);
+  width: 24px;
+  height: 24px;
+  transform: rotate(13deg);
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+.ellipse_transparent {
+  background-color: unset;
+  width: 356px; /* change to relative?*/
+  height: 135px;
+  border-radius: 50%;
+  transform: rotate(-2deg);
+  border: 2px solid #d9ff5a;
+  position: relative;
+  top: 19%;
+  left: -1px;
+}
+
+.description {
+  flex: 0;
 }
